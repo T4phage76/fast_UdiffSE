@@ -19,7 +19,7 @@
 import torch
 
 import numpy as np
-from ...sdes import OUVESDE, OUVPSDE
+from sgmse.sdes import OUVESDE, OUVPSDE
 
 
 _MODELS = {}
