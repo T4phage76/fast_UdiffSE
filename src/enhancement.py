@@ -47,7 +47,7 @@ class UDiffSE:
 
         # ==== Prior model ====
         self.model = ScoreModel.load_from_checkpoint(
-            ckpt_path, base_dir="", batch_size=1, num_workers=0, kwargs=dict(gpu=False)
+            ckpt_path, base_dir="", batch_size=1, num_workers=0, weights_only = False, kwargs=dict(gpu=False)
         )
         self.model.data_module.transform_type = transform_type
         self.model.eval(no_ema=False)
